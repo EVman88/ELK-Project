@@ -1,0 +1,2 @@
+#!/bin/bash
+cat $1_Dealer_schedule $1_Times1 | sed -e 's/05:00:00 AM/TIMES_LOSS 05:00:00 AM/' -e 's/08:00:00 AM/TIMES_LOSS 08:00:00 AM/' -e 's/02:00:00 PM/TIMES_LOSS 02:00:00 PM/' -e 's/08:00:00 PM/TIMES_LOSS 08:00:00 PM/' -e 's/11:00:00 PM/TIMES_LOSS 11:00:00 PM/' | grep -i 'TIMES_LOSS'* | awk '{print $2, $3, $6, $7}' | grep 'Billy Jones' | cat >> Dealers_working_during_losses
