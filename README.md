@@ -1,2 +1,2 @@
-# ELK-Project1
-Project 1
+# ELK-Project
+Project
