@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-Azure Week 12 Diagram.png ([ELK-Project/Diagram Folder/ Azure Week 12 Diagram.png](https://github.com/EVman88/ELK-Project/blob/main/Diagram%20Folder/Azure%20Week%2013%20Diagram.png))
+Azure Week 13 Diagram ([ELK-Project/Diagram Folder/ Azure Week 13 Diagram.png](https://github.com/EVman88/ELK-Project/blob/main/Diagram%20Folder/Azure%20Week%2013%20Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
