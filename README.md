@@ -7,7 +7,8 @@ Azure Week 13 Diagram ([ELK-Project/Diagram Folder/ Azure Week 13 Diagram.png](h
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
  Playbook 1: [configure_webserver.yml](https://github.com/EVman88/ELK-Project/blob/main/Ansible/configure_webserver.yml)
- ---
+
+---
   - name: Webservers playbook
     hosts: webservers
     become: true
@@ -44,6 +45,60 @@ These files have been tested and used to generate a live ELK deployment on Azure
       systemd:
         name: docker
         enabled: yes
+        
+Playbook 2: configure_elk.yml [https://github.com/EVman88/ELK-Project/blob/main/Ansible/configure_elk.yml](url)
+
+---
+- name: Configure Elk VM with Docker
+  hosts: elk
+  remote_user: azadmin
+  become: true
+  tasks:
+    # apt module
+    - name: Install docker.io
+      apt:
+        update_cache: yes
+        force_apt_get: yes
+        name: docker.io
+        state: present
+    
+    # apt module
+    - name: Install python3-pip
+      apt:
+        force_apt_get: yes
+        name: python3-pip
+        state: present
+      
+    # pip module 
+    - name: Install Docker module
+      pip:
+        name: docker
+        state: present
+    
+    # command module
+    - name: Increase virtual memory
+      command: sysctl -w vm.max_map_count=262144
+      
+    # sysctl module
+    - name: Use more memory
+      sysctl:
+        name: vm.max_map_count
+        value: '262144'
+        state: present
+        reload: yes
+      
+    # Docker_container module
+    - name: download and launch a docker elk container
+      docker_container:
+        name: elk
+        image: sebp/elk:761
+        state: started
+        restart_policy: always
+        # ports run
+        published_ports:
+          -  5601:5601
+          -  9200:9200
+          -  5044:5044
 
 This document contains the following details:
 - Description of the Topology
