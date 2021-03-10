@@ -101,7 +101,7 @@ Playbook 2: configure_elk.yml ![https://github.com/EVman88/ELK-Project/blob/main
           -  9200:9200
           -  5044:5044
 
-Playbook 3: filebeat-playbeat.yml ![https://github.com/EVman88/ELK-Project/blob/main/Ansible/filebeat-playbook.yml]
+Playbook 3: filebeat-playbeat.yml ![filebeat-playbook](https://github.com/EVman88/ELK-Project/blob/main/Ansible/filebeat-playbook.yml)
 
 ---
 - name: installing and launching filebeat
