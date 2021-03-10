@@ -45,9 +45,11 @@ These files have been tested and used to generate a live ELK deployment on Azure
       systemd:
         name: docker
         enabled: yes
-        
-Playbook 2: configure_elk.yml ![https://github.com/EVman88/ELK-Project/blob/main/Ansible/configure_elk.yml]
+```
 
+        
+Playbook 2: configure_elk.yml
+```
 ---
 - name: Configure Elk VM with Docker
   hosts: elk
@@ -99,9 +101,11 @@ Playbook 2: configure_elk.yml ![https://github.com/EVman88/ELK-Project/blob/main
           -  5601:5601
           -  9200:9200
           -  5044:5044
+```
 
-Playbook 3: filebeat-playbeat.yml ![filebeat-playbook](https://github.com/EVman88/ELK-Project/blob/main/Ansible/filebeat-playbook.yml)
 
+Playbook 3: filebeat-playbeat.yml
+```
 ---
 - name: installing and launching filebeat
   hosts: webservers
@@ -133,8 +137,8 @@ Playbook 3: filebeat-playbeat.yml ![filebeat-playbook](https://github.com/EVman8
       name: filebeat
       enabled: yes
 
-Playbook 4: metricbeat-playbook.yml ![https://github.com/EVman88/ELK-Project/blob/main/Ansible/metricbeat-playbook.yml]
-
+Playbook 4: metricbeat-playbook.yml
+```
 ---
 - name: installing and launching metricbeat
   hosts: webservers
@@ -166,7 +170,7 @@ Playbook 4: metricbeat-playbook.yml ![https://github.com/EVman88/ELK-Project/blo
       name: metricbeat
       enabled: yes
       masked: no
-
+```
 
 This document contains the following details:
 - Description of the Topology
