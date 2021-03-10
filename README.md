@@ -2,11 +2,11 @@
 
 The files in this repository were used to configure the network depicted below.
 
-Azure Week 13 Diagram ([ELK-Project/Diagram Folder/ Azure Week 13 Diagram.png](https://github.com/EVman88/ELK-Project/blob/main/Diagram%20Folder/Azure%20Week%2013%20Diagram.png)
+Azure Week 13 Diagram !([ELK-Project/Diagram Folder/ Azure Week 13 Diagram.png](https://github.com/EVman88/ELK-Project/blob/main/Diagram%20Folder/Azure%20Week%2013%20Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
- Playbook 1: [configure_webserver.yml](https://github.com/EVman88/ELK-Project/blob/main/Ansible/configure_webserver.yml)
+ Playbook 1: ![configure_webserver.yml](https://github.com/EVman88/ELK-Project/blob/main/Ansible/configure_webserver.yml)
 
 ---
   - name: Webservers playbook
@@ -46,7 +46,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
         name: docker
         enabled: yes
         
-Playbook 2: configure_elk.yml [https://github.com/EVman88/ELK-Project/blob/main/Ansible/configure_elk.yml]
+Playbook 2: configure_elk.yml ![https://github.com/EVman88/ELK-Project/blob/main/Ansible/configure_elk.yml]
 
 ---
 - name: Configure Elk VM with Docker
@@ -100,7 +100,7 @@ Playbook 2: configure_elk.yml [https://github.com/EVman88/ELK-Project/blob/main/
           -  9200:9200
           -  5044:5044
 
-Playbook 3: filebeat-playbeat.yml [https://github.com/EVman88/ELK-Project/blob/main/Ansible/filebeat-playbook.yml]
+Playbook 3: filebeat-playbeat.yml ![https://github.com/EVman88/ELK-Project/blob/main/Ansible/filebeat-playbook.yml]
 
 ---
 - name: installing and launching filebeat
@@ -133,7 +133,7 @@ Playbook 3: filebeat-playbeat.yml [https://github.com/EVman88/ELK-Project/blob/m
       name: filebeat
       enabled: yes
 
-Playbook 4: metricbeat-playbook.yml [https://github.com/EVman88/ELK-Project/blob/main/Ansible/metricbeat-playbook.yml]
+Playbook 4: metricbeat-playbook.yml ![https://github.com/EVman88/ELK-Project/blob/main/Ansible/metricbeat-playbook.yml]
 
 ---
 - name: installing and launching metricbeat
@@ -233,7 +233,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-[https://github.com/EVman88/ELK-Project/blob/main/Images/sudo%20docker%20ps.png](ELK-Project/Images/sudo docker ps.png)
+![https://github.com/EVman88/ELK-Project/blob/main/Images/sudo%20docker%20ps.png](ELK-Project/Images/sudo docker ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -246,8 +246,8 @@ We have installed the following Beats on these machines:
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- Filebeat monitors the log files or locations that you specify, collects log events, and forwards them for indexing.
-- Metricbeat is used to gather metrics and statistics from servers running on the server and from the operating system
+- Filebeat monitors the log files or locations that you specify, collects log events, and forwards them for indexing. You would use filebeat to collect all logs.
+- Metricbeat is used to gather metrics and statistics from servers running on the server and from the operating system. You could use metricbeat to gather statistics of all servers.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
