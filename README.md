@@ -262,6 +262,7 @@ SSH into the control node and follow the steps below:
 - Copy the playbook files to the ansible docker container /etc/ansible.
 - Update the ansible hosts file /etc/ansible/hosts to include:
 
+```
 [webservers]
 10.0.0.5 ansible_python_interpreter=/usr/bin/python3
 10.0.0.6 ansible_python_interpreter=/usr/bin/python3
@@ -269,6 +270,7 @@ SSH into the control node and follow the steps below:
 
 [elk]
 10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+```
 
 - Update the /etc/ansible/ansible.cfg and change remote_user to azadmin (username chosen)
 - Run the playbook, SSH into the elk VM, then run docker ps to check that the installation worked as expected.
