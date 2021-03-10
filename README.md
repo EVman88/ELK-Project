@@ -6,7 +6,8 @@ Azure Week 13 Diagram ![ELK-Project/Diagram Folder/Azure Week 13 Diagram.png](ht
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
- Playbook 1: ![ELK-Project/Ansible/configure_webserver.yml](https://github.com/EVman88/ELK-Project/blob/main/Ansible/configure_webserver.yml)
+ Playbook 1: 
+ ![webserver](https://github.com/EVman88/ELK-Project/blob/main/Ansible/configure_webserver.yml)
 
 ---
   - name: Webservers playbook
