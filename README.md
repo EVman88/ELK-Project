@@ -136,6 +136,8 @@ Playbook 3: filebeat-playbeat.yml
     systemd:
       name: filebeat
       enabled: yes
+```
+
 
 Playbook 4: metricbeat-playbook.yml
 ```
